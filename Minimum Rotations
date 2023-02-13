@@ -1,0 +1,12 @@
+#include <bits/stdc++.h> 
+int minimumRotations(int n, string s)
+{
+	// Write your code here
+	string concat=s+s;
+	for(int i=1; i<=n; i++){
+		string temp=concat.substr(i, n);
+		if(temp==s)
+			return i;
+	}
+	return -1;
+}
