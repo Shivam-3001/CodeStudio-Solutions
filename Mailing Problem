@@ -1,0 +1,12 @@
+int timeTakenToMail(string keyboard, string str) {
+    //    Write your code here
+    int sum=0;
+    int a=0;
+    for(int i=0; i<str.size(); i++){
+        int pos=keyboard.find(str[i]);
+        int temp=abs((a-pos));
+        sum=sum+temp;
+        a=pos;
+    }
+    return sum;
+}
