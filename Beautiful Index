@@ -1,0 +1,22 @@
+#include <bits/stdc++.h> 
+int beautifulIndex(int n, vector<int> arr)
+{
+	// Write your code here.
+	
+	int ans=-1;
+	int prefixSum=0;
+	int suffixSum=0;
+	for(int i=0; i<arr.size(); i++)	suffixSum+=arr[i];
+	for(int i=0; i<n; i++){
+		suffixSum-=arr[i];
+		if(prefixSum==suffixSum){
+			ans=i+1;
+			break;
+		}
+		prefixSum+=arr[i];
+	}
+
+	return ans;
+
+	
+}
