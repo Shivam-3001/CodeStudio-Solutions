@@ -1,0 +1,9 @@
+bool isKthBitSet(int n, int k)
+{
+    // Write your code here.
+    string binary = bitset<32>(n).to_string();
+    // cout<<binary<<endl;
+    int size=binary.size();
+    if(binary[size-k]=='1')   return true;
+    return false;
+}
