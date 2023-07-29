@@ -1,0 +1,23 @@
+Node* removeKthNode(Node* head, int k)
+{
+    // Write your code here.
+
+    int cnt=0;
+    Node* temp=head;
+    while(temp){
+        cnt++;
+        temp=temp->next;
+    }
+    // cout<<cnt<<endl;
+    if(cnt==k)  return head->next;
+    k=cnt-k-1;
+    // cout<<k<<endl;
+    temp=head;
+    while(k>0){
+        k--;
+        temp=temp->next;
+    }
+    temp->next=temp->next->next;
+
+    return head;
+}
