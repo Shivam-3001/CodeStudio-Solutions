@@ -1,0 +1,23 @@
+#include <bits/stdc++.h> 
+
+int countOfDivisiblePairs(int n, int m){
+	// Write your code here
+	  int count = 0;
+
+  // Generating all the pairs.
+  for (int i = 1; i <= n; i++) {
+
+    for (int j = 1; j <= m; j++) {
+
+      // Checking divisibility condition for the pair.
+      if ((i + j) % 5 == 0) {
+        count++;
+      }
+
+    }
+
+  }
+
+  return count;
+
+}
