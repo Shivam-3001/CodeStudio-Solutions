@@ -1,0 +1,7 @@
+int boxFilling(int n, int x, int y){
+    // Write your code here
+
+    int ans=n*x;
+    if(ans%y==0)    return ans/y;
+    return ans/y+1;
+}
