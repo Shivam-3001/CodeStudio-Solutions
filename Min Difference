@@ -1,0 +1,11 @@
+int minDifference(vector<int> &a) {
+    sort(a.begin(), a.end());
+
+    int min_diff = INT_MAX;
+    for (int i = 1; i < a.size(); ++i) {
+        int diff = a[i] - a[i - 1];
+        min_diff = min(min_diff, diff);
+    }
+
+    return min_diff;
+}
