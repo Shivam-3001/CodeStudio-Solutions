@@ -1,0 +1,27 @@
+string removeConsecutiveDuplicates(string input)
+{
+    // Write your code here
+     int n = input.size();
+
+    if (n == 0)
+    {
+        return input;
+    }
+
+    string answer;
+    answer += (input[0]);
+    int i = 1;
+
+    while (i < n)
+    {
+
+        if (input[i] != input[i - 1])
+        {
+            answer += (input[i]);
+        }
+
+        i += 1;
+    }
+
+    return answer;
+}
