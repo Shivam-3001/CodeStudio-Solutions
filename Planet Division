@@ -1,0 +1,9 @@
+vector<int> planetDivision(int n) {
+	// Write your code here.
+	if(n%2==0){
+		return {n/2, n/2};
+	}
+
+	return {n/2+1, n/2};
+	
+}
