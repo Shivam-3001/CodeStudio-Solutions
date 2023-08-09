@@ -1,0 +1,20 @@
+long long countPairs(int n, vector<int> a) {
+    // Write your code here.
+    int max_val = *max_element(a.begin(), a.end());
+    int min_val = *min_element(a.begin(), a.end());
+    int max_abs_diff = abs(max_val - min_val);
+    int count_max = 0, count_min = 0;
+    for (int num : a) {
+        if (num == max_val) {
+            count_max++;
+        }
+        if (num == min_val) {
+            count_min++;
+        }
+    }
+    if (max_abs_diff == 0) {
+        return (count_max * (count_max - 1)) ;
+    }
+    int distinct_pairs = count_max * count_min;
+    return distinct_pairs*2;
+}
