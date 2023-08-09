@@ -1,0 +1,40 @@
+bool isPrime(int num) {
+    if (num <= 1) {
+        return false;
+    }
+    if (num <= 3) {
+        return true;
+    }
+    if (num % 2 == 0 || num % 3 == 0) {
+        return false;
+    }
+    for (int i = 5; i * i <= num; i += 6) {
+        if (num % i == 0 || num % (i + 2) == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int primeSum(int N,int M,vector<int> &arr){
+    // Write your code here
+    int goodSubsequences = 0;
+
+    // Generate all subsequences of size M
+    for (int bitmask = 0; bitmask < (1 << N); bitmask++) {
+        if (__builtin_popcount(bitmask) == M) {
+            int subsequenceSum = 0;
+            for (int i = 0; i < N; i++) {
+                if (bitmask & (1 << i)) {
+                    subsequenceSum += arr[i];
+                }
+            }
+            if (isPrime(subsequenceSum)) {
+                goodSubsequences++;
+            }
+        }
+    }
+
+    return goodSubsequences;
+
+}
