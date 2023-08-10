@@ -1,0 +1,16 @@
+#include <bits/stdc++.h> 
+
+void reverse(string &str, int i, int j){
+    if(i>j) return;
+    swap(str[i], str[j]);
+    i++;
+    j--;
+
+    reverse(str, i, j);
+}
+string stringReverse(string s) {
+    // Write your code here.
+    reverse(s, 0, s.size()-1);
+    return s;
+  
+}
