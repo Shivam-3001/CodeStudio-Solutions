@@ -1,0 +1,26 @@
+char nextLower(char c) {
+    if (c == 'z') {
+        return 'a';
+    }
+    return c + 1;
+}
+
+char prevUpper(char c) {
+    if (c == 'A') {
+        return 'Z';
+    }
+    return c - 1;
+}
+
+string ninjaAndStringConversion(int n, string &s){
+	// Write your code here.
+	for (char& c : s) {
+        if (islower(c)) {
+            c = nextLower(c);
+        } else if (isupper(c)) {
+            c = prevUpper(c);
+        }
+    }
+    return s;
+	
+}
