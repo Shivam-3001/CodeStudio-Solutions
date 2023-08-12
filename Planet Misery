@@ -1,0 +1,5 @@
+int planetMisery(int n, int m){
+    // Write your code here
+    if(abs(n-m)<=1) return n+m;
+    return min(n, m)*2+1;
+}
