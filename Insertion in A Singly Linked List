@@ -1,0 +1,28 @@
+
+void insert(Node * ( & head), int n, int pos, int val) {
+    Node *newNode=new Node(val);
+    if(pos==0){
+        newNode->next=head;
+        head=newNode;
+    }
+    else if(pos==n){
+        Node*temp=head;
+        while(temp->next!=NULL){
+            temp=temp->next;
+        }
+        temp->next=newNode;
+        newNode->next=NULL;
+    }
+    else{
+        Node* prev=head;
+        Node*curr=head->next;
+        pos-=1;
+        while (pos != 0) {
+          pos--;
+          prev = prev->next;
+          curr = curr->next;
+        }
+        prev->next = newNode;
+        newNode->next = curr;
+    }
+}
