@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+string amazingStrings(string first, string second,string third) {
+     vector<int>dp(256,0);
+
+   for(auto i :third)
+
+     dp[i]++;
+
+   for(auto i: first)
+
+    dp[i]--;
+
+     for(auto i: second)
+
+    dp[i]--;
+
+ 
+
+    for(int i : dp)
+
+    if(i!=0)
+
+    return "NO";
+
+    return "YES";
+}
