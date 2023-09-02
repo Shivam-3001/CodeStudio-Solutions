@@ -1,0 +1,19 @@
+string directionGame(int n, string &s) {
+    // Write your code here.
+    string ans="NORTH";
+    for(int i=0; i<n; i++){
+        if(s[i]=='1'){
+            if(ans=="NORTH")    ans="WEST";
+            else if(ans=="WEST")    ans="SOUTH";
+            else if(ans=="SOUTH")   ans="EAST";
+            else if(ans=="EAST")    ans="NORTH";
+        }
+        else{
+            if(ans=="NORTH")    ans="EAST";
+            else if(ans=="WEST")    ans="NORTH";
+            else if(ans=="SOUTH")   ans="WEST";
+            else if(ans=="EAST")    ans="SOUTH";
+        }
+    }
+    return ans;
+}
