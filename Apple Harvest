@@ -1,0 +1,6 @@
+long long wastedApples(int n, int m, int x) {
+    // Write your code here.
+    long long rem=n-m;
+    if(rem<=0)  return 0;
+    return rem*x;
+}
