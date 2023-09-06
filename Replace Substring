@@ -1,0 +1,14 @@
+int replaceSubstring(string s) {
+	// Write your code here.
+	int cnt=0;
+	for(int i=0; i<s.size(); i++){
+		char ch=s[i];
+		bool flag=false;
+		while(ch==s[i+1]){
+			flag=true;
+			i++;
+		}
+		if(flag)	cnt++;
+	}
+	return cnt;
+}
