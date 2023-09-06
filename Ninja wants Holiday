@@ -1,0 +1,15 @@
+string ninjaWantsHoliday(int n, int k, vector<int> &a) {
+	sort(a.begin(), a.end());
+	int max_size=0;
+	for(int i=0; i<a.size()-1; i++){
+		int cnt=0;
+		while(a[i+1]==a[i]+1){
+			i++;
+			cnt++;
+		}
+		max_size=max(max_size, cnt);
+	}
+	max_size++;
+	if(max_size>=k)	return "YES";
+	return "NO";
+}
