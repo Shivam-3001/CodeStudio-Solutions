@@ -1,0 +1,7 @@
+#include <bits/stdc++.h> 
+int getMaximumHouses(int k, int l)
+{
+	//	Write you code here.
+	int n=(1<<l);
+	return n-k;
+}
