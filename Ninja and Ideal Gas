@@ -1,0 +1,11 @@
+string ninjaAndIdealGas(int  p, int v, int n, int r, int t) {
+	// Write your code here.
+	long double left_side = p /n;
+    long double right_side = (r*t)/v;
+
+    // Check if the gas is ideal
+    if (left_side == right_side) {
+        return "YES";
+    } 
+	return "NO";
+}
