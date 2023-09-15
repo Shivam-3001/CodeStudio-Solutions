@@ -1,0 +1,13 @@
+#include <bits/stdc++.h> 
+int fishEater(vector<int> &fishes) {
+    // Write your code here.
+    int cnt=1;
+    int first=fishes[0];
+    for(int i=1; i<fishes.size(); i++){
+        if(fishes[i]>=first){
+            cnt++;
+            first=fishes[i];
+        }
+    }
+    return cnt;
+}
