@@ -1,0 +1,7 @@
+Node* insertAtFirst(Node* list, int newValue) {
+    // Write your code here
+    Node *newNode=new Node(newValue);
+    newNode->next=list;
+    list=newNode;
+    return list;
+}
