@@ -1,0 +1,16 @@
+#include <bits/stdc++.h> 
+char findAddedCharacter(string &s, string &t) {
+    // Write your code here.
+    map<int, int> mp;
+    for(auto it: t){
+        mp[it]++;
+    }
+    for(auto it: s){
+        mp[it]--;
+    }
+
+    for(auto it: mp){
+        if(it.second==1)    return it.first;
+    }
+    return '#';
+}
