@@ -1,0 +1,7 @@
+int canSheMakeEqual(int x, int y) {
+    // Write your code here.
+    if(x==y)    return 1;
+    int diff=abs(x-y);
+    if(diff%3==0)   return 1;
+    return 0;
+}
