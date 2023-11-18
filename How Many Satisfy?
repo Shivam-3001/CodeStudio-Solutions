@@ -1,0 +1,18 @@
+int howManySatisfy(int n, int k, vector<int>& arr) {
+    int ans=0;
+    for(int i=0; i<n; i++){
+        int x=i+(2*k)-1;
+        int p=0, q=0;
+        for(int j=i; j<i+k; j++){
+            p+=arr[j];
+        }
+        for(int j=i+k; j<i+(2*k); j++){
+            q+=arr[j];
+        }
+        if(p>q && x<n){
+            ans++;
+        }
+    }
+    return ans;
+
+}
