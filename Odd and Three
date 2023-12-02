@@ -1,0 +1,19 @@
+int countMoves(int n, vector<int> a) {
+    
+    // Write your code here.
+    int fcnt=0, scnt=0;
+    for(int i=0; i<a.size(); i++){
+        if(a[i]&1){
+            continue;
+        }
+        fcnt++;
+    }
+    for(int i=0; i<a.size(); i++){
+        if(a[i]%3==0){
+            continue;
+        }
+        int temp=a[i]%3;
+        scnt+=3-temp;
+    }
+    return (fcnt<scnt ? fcnt : scnt);
+}
