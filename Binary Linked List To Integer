@@ -1,0 +1,11 @@
+int binaryToInteger(int n, Node *head) {
+    //    Write your code here
+    string str="";
+    while(head){
+        int temp=head->data;
+        str+=to_string(temp);
+        head=head->next;
+    }
+
+    return stoi(str, 0, 2);
+}
