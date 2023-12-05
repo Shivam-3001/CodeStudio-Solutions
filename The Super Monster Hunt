@@ -1,0 +1,19 @@
+bool isDigit(int n, int x){
+   while(n>0){
+      int rem=n%10;
+      if(rem==x)  return false;
+      n/=10;
+   }
+   return true;
+}
+
+int theSuperMonsterHunt(int n, int d, vector <int> &a) {
+   // Write Your Code Here
+   int ans=-1;
+   for(int i=0; i<a.size(); i++){
+      if(isDigit(a[i], d)){
+         ans=max(ans, a[i]);
+      }
+   }
+   return ans;
+}
