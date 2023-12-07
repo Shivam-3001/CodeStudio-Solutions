@@ -1,0 +1,5 @@
+int magicTrick(int n) {
+    // Write Your Code Here.
+    if(n&1) return (n/2)+1;
+    return n/2;
+}
