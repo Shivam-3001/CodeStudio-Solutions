@@ -1,0 +1,20 @@
+vector<int> addAndSubtract(int n, int k) {
+    // Write your code here.
+    int aux=1, index=1;
+    vector<int> ans;
+    int temp=n;
+    while(index<=k){
+        if(index&1){
+            ans.push_back(temp+aux);
+            temp=temp+aux;
+            aux++;
+        }
+        else{
+            ans.push_back(temp-aux);
+            temp=temp-aux;
+            aux++;
+        }
+        index++;
+    }
+    return ans;
+}
