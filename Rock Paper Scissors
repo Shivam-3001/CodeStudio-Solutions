@@ -1,0 +1,32 @@
+#include <bits/stdc++.h> 
+vector < int > rockPaperScissor(int k, string nezuko, string zenitsu) {
+    int n=0;
+    int z=0;
+    int i=0, j=0;
+
+    int cnt=k;
+    while(cnt--){
+        if(i==nezuko.size()){
+            i=0;
+        }
+        if(j==zenitsu.size()){
+            j=0;
+        }
+        if(nezuko[i]==zenitsu[j]){
+            i++;
+            j++;
+            continue;
+        }
+        if((nezuko[i]=='R' && zenitsu[j]=='S') || (nezuko[i]=='S' && zenitsu[j]=='P') || (nezuko[i]=='P' && zenitsu[j]=='R')){
+            n++;
+            i++;
+            j++;
+        }
+        else{
+            z++;
+            i++;
+            j++;
+        }
+    }
+    return {n, z};
+}
