@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+
+vector<long long int> addFraction(int a, int b, int c, int d)
+{
+	long long x=((a*b*d)/b) + ((c*b*d)/d);
+	long long y=(b*d);
+	int GCD = __gcd(x, y);
+    x = x / GCD;
+    y = y / GCD;
+	return {x, y};
+}
