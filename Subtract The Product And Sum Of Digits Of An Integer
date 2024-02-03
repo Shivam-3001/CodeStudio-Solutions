@@ -1,0 +1,22 @@
+#include <bits/stdc++.h> 
+int findProductSumDifference(int n){
+	// Write your code here
+	int num1=n;
+	int num2=n;
+
+	int sum=0, product=1;
+	while(num1>0){
+		int rem=num1%10;
+		sum+=rem;
+		num1/=10;
+	}
+
+	while(num2>0){
+		int rem=num2%10;
+		product*=rem;
+		num2/=10;
+	
+	}
+
+	return product-sum;
+}
